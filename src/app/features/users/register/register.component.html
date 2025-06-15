@@ -1,4 +1,53 @@
-<div class="left"></div>
-<div class="right">
-    <h2>Registartion: </h2>
-</div>
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+  <div>
+    <label>First Name</label>
+    <input name="firstName" [(ngModel)]="user.firstName" required />
+  </div>
+
+  <div>
+    <label>Last Name</label>
+    <input name="lastName" [(ngModel)]="user.lastName" required />
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input name="email" [(ngModel)]="user.email" type="email" required />
+  </div>
+
+  <div>
+    <label>Phone</label>
+    <input name="phone" [(ngModel)]="user.phone" required />
+  </div>
+
+  <div>
+    <label>Password</label>
+    <input name="password" [(ngModel)]="user.password" type="password" required />
+  </div>
+<div>
+    <label>Street</label>
+    <input name="street" [(ngModel)]="user.address.street" required />
+  </div>
+
+  <div>
+    <label>City</label>
+    <input name="city" [(ngModel)]="user.address.city" required />
+  </div>
+
+  <div>
+    <label>State</label>
+    <input name="state" [(ngModel)]="user.address.state" required />
+  </div>
+
+  <div>
+    <label>Postal Code</label>
+    <input name="postalCode" [(ngModel)]="user.address.postalCode" required />
+  </div>
+
+  <div>
+    <label>Country</label>
+    <input name="country" [(ngModel)]="user.address.country" required />
+  </div>
+
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  <p>Already have an account? <a routerLink="/login">Login here</a></p>
+</form>

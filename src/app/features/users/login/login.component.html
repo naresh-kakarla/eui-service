@@ -1,4 +1,15 @@
-<div class="left"></div>
-<div class="right">
-    <h2>Login: </h2>
-</div>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div>
+        <label>Email or phone</label>
+        <input name="Email or phone" [(ngModel)]="user.email" required >
+    </div>
+    <div>
+        <label>password</label>
+        <input name="password" [(ngModel)]="user.password" required >
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+
+   
+    
+</form>
