@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UppercasePipe } from './pipes/uppercase.pipe';
 
+import { UsersModule } from './features/users/users.module';
+import { DashboardModule } from './features/dashboard/dashboard.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +15,9 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    UsersModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
