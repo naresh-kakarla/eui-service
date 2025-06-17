@@ -1,32 +1,18 @@
-body, html {
-  margin: 0;
-  height: 100%;
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
 }
 
-.left, .right {
-  height: 100vh;
-  float: left;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 1.5rem;
 }
 
-.left {
-  width: 65%;
-  background-color: #f0f0f0;
-}
-
-.right {
-  width: 35%;
-  background-color: #f0f0f0;
-}
-
-.example-card {
-  max-width: 400px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-mat-grid-tile {
-  background: lightblue;
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
 }

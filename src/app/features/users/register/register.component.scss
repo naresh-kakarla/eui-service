@@ -1,19 +1,22 @@
-body, html {
-  margin: 0;
-  height: 100%;
+:host {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
 }
 
-.left, .right {
-  height: 100vh;
-  float: left;
+.register-form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #f5f5f5;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.left {
-  width: 30%;
-  background-color: #f0f0f0;
-}
-
-.right {
-  width: 70%;
-  background-color: #f0f0f0;
+.address-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
