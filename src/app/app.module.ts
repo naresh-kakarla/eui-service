@@ -7,17 +7,21 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
 
 import { UsersModule } from './features/users/users.module';
 import { DashboardModule } from './features/dashboard/dashboard.module';
+import { ProductDetailsModule } from './features/product-details/product-details.module';
+import { ProductDetailsComponent } from './features/product-details/product-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UppercasePipe
+    UppercasePipe,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     UsersModule,
-    DashboardModule
+    DashboardModule,
+    ProductDetailsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

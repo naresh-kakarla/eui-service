@@ -1,1 +1,14 @@
-<p>home works!</p>
+<div class="product-list">
+    <div class="product-card" *ngFor="let product of products" (click)="productDetails()">
+        <img [src]="product.image" alt="{{product.image}}">
+
+        <div class="product-details">
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="price">₹{{product.price}}</p>
+    </div>
+    </div>
+    
+</div>
+
+

@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path:'home',
     component:HomeComponent
+  },
+  {
+    path:'productDetails',
+    loadChildren:()=>import('./features/product-details/product-details.module').then(prod=>prod.ProductDetailsModule)
   }
   
 ];
