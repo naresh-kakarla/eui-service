@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  data = [
+    "data1",
+    "data2",
+    "data3",
+  ]
+
 }
