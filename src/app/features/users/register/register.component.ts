@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { RegisterService } from './register.service';
+import { UserServicesService } from 'src/app/core/user-services.service';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private registerUser:RegisterService
+    private registerUser:UserServicesService
   ) { }
 
   ngOnInit(): void {
@@ -23,15 +23,12 @@ export class RegisterComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      password: ['', Validators.required],
-      address: this.fb.group({
-        street: ['', Validators.required],
-        city: ['', Validators.required],
-        state: ['', Validators.required],
-        postalCode: ['', Validators.required],
-        country: ['', Validators.required]
-      })
+      password: ['', Validators.required]
     });
+  }
+
+  get formControl(){
+    return this.registerForm.controls;
   }
 
   onSubmit() {

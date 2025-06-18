@@ -1,22 +1,19 @@
 :host {
   display: flex;
-  justify-content: flex-end;
-  padding: 2rem;
+  justify-content: center;
+  // padding: 1rem;
 }
 
 .register-form {
-  width: 400px;
+  width: 350px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  // gap: 10px;
   background-color: #f5f5f5;
-  padding: 24px;
-  border-radius: 8px;
+  // padding: 10px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: fixed;
 }
 
-.address-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+

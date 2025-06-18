@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { LoginService } from './login.service';
 import { Router } from '@angular/router';
+import { UserServicesService } from 'src/app/core/user-services.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private loginService: LoginService,private router:Router) {}
+  constructor(private loginService: UserServicesService,private router:Router) {}
 
   onSubmit(form: NgForm) {
     if (form.valid) {
