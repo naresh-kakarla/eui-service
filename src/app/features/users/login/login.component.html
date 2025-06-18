@@ -1,16 +1,19 @@
-<div class="left"></div>
-<div class="right">
-    <h2>Login: </h2>
+<div class="login-container">
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="login-form" >
+    <h2>Login</h2>
+
+    <div class="form-fields">
+      <mat-form-field appearance="fill">
+        <mat-label>Email or Phone</mat-label>
+        <input matInput name="email" ngModel required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" ngModel required>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit">Login</button>
+  </form>
 </div>
-
-<!-- <mat-grid-list cols="3" rowHeight="2:3">
-    <div *ngFor="let data1 of data">
-        <mat-grid-tile>
-        <app-card></app-card>
-        </mat-grid-tile>
-</div>
-</mat-grid-list> -->
-
-
-
-

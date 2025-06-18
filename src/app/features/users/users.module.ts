@@ -6,7 +6,15 @@ import { UsersComponent } from './users.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CompModule } from 'src/app/comp/comp.module';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -19,8 +27,16 @@ import {MatGridListModule} from '@angular/material/grid-list';
   imports: [
     CommonModule,
     UsersRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     CompModule,
-    MatGridListModule
-]
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatCardModule,
+    MatSnackBarModule,
+    HttpClientModule
+  ]
 })
 export class UsersModule { }

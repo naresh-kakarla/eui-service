@@ -1,4 +1,60 @@
-<div class="left"></div>
-<div class="right">
-    <h2>Registartion: </h2>
-</div>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form" novalidate>
+  <h2>User Registration</h2>
+
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password" required>
+  </mat-form-field>
+
+  <div formGroupName="address" class="address-section">
+    <h3>Address</h3>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Street</mat-label>
+      <input matInput formControlName="street">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>City</mat-label>
+      <input matInput formControlName="city">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>State</mat-label>
+      <input matInput formControlName="state">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Postal Code</mat-label>
+      <input matInput formControlName="postalCode">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Country</mat-label>
+      <input matInput formControlName="country">
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Register</button>
+  <p>Already have an account? <a routerLink="/users/login">Login here</a></p>
+</form>
