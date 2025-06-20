@@ -36,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCardModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ]
 })
 export class UsersModule { }
