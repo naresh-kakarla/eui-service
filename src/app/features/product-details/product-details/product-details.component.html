@@ -1,19 +1,24 @@
-<div *ngIf="product; " class="product-details">
-  <h2 style="text-align: center;">{{ product.name }}</h2>
+<div *ngIf="product" class="product-details">
+  <h2 style="text-align: center; margin-top: -3%;">{{ product.name }}</h2>
 
-  <mat-grid-list cols="2" gutterSize="16px" rowHeight="1:1" class="grid-container">
-   
+  <mat-grid-list cols="2" gutterSize="2%" rowHeight="1:1" class="grid-container">
     <mat-grid-tile>
-      <img [src]="product.imageUrl" [alt]="product.name" class="product-image" />
+      <div class="image-section">
+        <img [src]="product.imageUrl" [alt]="product.name" class="product-image" />
+        <div class="related-images">
+          <h3>More Views</h3>
+          <div class="image-row">
+            <img *ngFor="let images of product.relativeImages" [src]="images" class="related-img" />
+          </div>
+        </div>
+      </div>
     </mat-grid-tile>
 
     <mat-grid-tile>
       <div class="product-info">
         <p><strong>Description:</strong> {{ product.description }}</p>
-        <p><strong>Price:</strong> {{ product.price }}</p>
+        <p><strong>Price:</strong> ₹{{ product.price }}</p>
       </div>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
-
-

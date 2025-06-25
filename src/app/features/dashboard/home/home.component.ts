@@ -9,117 +9,83 @@ import { ProductDetailsService } from 'src/app/core/services/product-details.ser
 })
 export class HomeComponent {
 
-  constructor(private router:Router, private productService:ProductDetailsService ){}
+  constructor(private router: Router, private productService: ProductDetailsService) { }
 
-   products = [
-  {
-    id: '1',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '2',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '3',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '4',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-   id: '5',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '6',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '7',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '8',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  { id: '9',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '10',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '11',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-  {
-    id: '12',
-    name: 'Laptop',
-    description: 'Powerful gaming laptop',
-    price: 1200,
-    category: 'Electronics',
-    imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg'
-  },
-];
+  products = [
+    {
+      id: '1',
+      name: 'Laptop',
+      description: 'Powerful gaming laptop',
+      price: 1200,
+      category: 'Electronics',
+      imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+      relativeImages: ['https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+      ]
+    },
+    {
+      id: '2',
+      name: 'Laptop',
+      description: 'Powerful gaming laptop',
+      price: 1200,
+      category: 'Electronics',
+      imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+      relativeImages: ['https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg']
+    },
+    {
+      id: '3',
+      name: 'Laptop',
+      description: 'Powerful gaming laptop',
+      price: 1200,
+      category: 'Electronics',
+      imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+      relativeImages: ['https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg']
+    },
+    {
+      id: '4',
+      name: 'Laptop',
+      description: 'Powerful gaming laptop',
+      price: 1200,
+      category: 'Electronics',
+      imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+      relativeImages: ['https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg']
+    },
+    {
+      id: '5',
+      name: 'Laptop',
+      description: 'Powerful gaming laptop',
+      price: 1200,
+      category: 'Electronics',
+      imageUrl: 'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+      relativeImages: ['https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg',
+        'https://thumbs.dreamstime.com/b/laptop-front-view-realistic-laptop-front-view-vector-illustration-d-computer-notebook-empty-screen-isolated-white-142569830.jpg']
+    },
+  ];
 
-   onClick(id:any){
-    
-    const productDetails=this.products.find(p=>p.id===id)
-    console.log('product==>',productDetails);
+  onClick(id: any) {
 
-    if(productDetails){
+    const productDetails = this.products.find(p => p.id === id)
+    console.log('product==>', productDetails);
+
+    if (productDetails) {
       this.productService.setSelectedProduct(productDetails)
-      this .router.navigate(['/products',id])
+      this.router.navigate(['/products', id])
     }
-    
-  
-   } 
+
+
+  }
 
 }
