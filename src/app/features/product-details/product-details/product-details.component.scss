@@ -1,0 +1,75 @@
+.product-details {
+  background-color: darkgrey;
+  margin-top: -6%;
+}
+
+.image-section {
+  display: grid;
+  grid-template-rows: 45% auto;
+  height: auto;
+  width: auto;
+  gap: 2%;
+  margin-top: auto;
+  overflow: auto;
+  box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.1);
+
+
+}
+
+/* Main Product Image */
+.product-image {
+  width: 65%;
+  height: 120%;
+  margin-top: 2%;
+  margin-left: 13%;
+  background-color: antiquewhite;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0.5% 2% rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: #2439b4;
+  }
+}
+
+/* Related Images Section */
+.related-images {
+  h3 {
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .image-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
+margin-left: 10%;
+    gap: 5%;
+    border-radius: 2%;
+  }
+
+  .related-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-color: antiquewhite;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+      border-color: #3f51b5;
+    }
+  }
+}
+
+.product-info {
+  padding: 2%;
+  border-radius: 8px;
+  font-size: 1.1vw;
+  height: 100%;
+}
