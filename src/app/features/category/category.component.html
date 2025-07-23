@@ -1,0 +1,12 @@
+<div class="category-grid">
+    <div class="category-card" *ngFor="let category of categories" (mouseenter)="onHoverCategory(category)">
+        {{ category }}
+    </div>
+</div>
+
+<div *ngIf="subCategories && subCategories.length>0">
+    
+    <ul>
+        <li *ngFor="let sub of subCategories">{{ sub }}</li>
+    </ul>
+</div>

@@ -13,10 +13,20 @@ export class LoginComponent {
 
   onSubmit(form: NgForm) {
     if (form.valid) {
-      const { email, password } = form.value;
-      this.loginService.userLogin({ email, password }).subscribe({
-        next: (res: any) => console.log('Login successful:', res),
-        error: (err: any) => console.error('Login failed:', err)
+      const { username, password } = form.value;
+      this.loginService.userLogin({ username, password }).subscribe({
+        
+        next: (res: any) =>{
+          console.log('Login successful:', res)
+          console.log('acess_token',res.data.access_token);
+          console.log('refresh_token==>',res.data.refresh_token);
+          
+          
+           localStorage.setItem('access_token', res.data.access_token);
+           localStorage.setItem('refresh_token', res.data.refresh_token);
+           this.router.navigate(['/home'])
+        } ,
+        error: (err: any) => {console.error('Login failed:', err)}
       });
     }
   }

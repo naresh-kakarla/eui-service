@@ -2,38 +2,52 @@
   <h2>User Registration</h2>
 
   <mat-form-field appearance="fill">
-    <mat-label>First Name</mat-label>
-    <input matInput formControlName="firstName" required>
-    <mat-error *ngIf="formControl['firstName'].errors?.['required'] && (formControl['firstName'].touched || formControl['firstName'].dirty)">
-    First name is required.
-  </mat-error>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Last Name</mat-label>
-    <input matInput formControlName="lastName" required>
-    <mat-error *ngIf="formControl['lastName'].errors?.['required'] && (formControl['lastName'].touched || formControl['lastName'].dirty)">Last Name is required</mat-error>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Email</mat-label>
-    <input matInput type="email" formControlName="email" required>
-    <mat-error *ngIf="formControl['email'].errors?.['required'] && (formControl['email'].touched || formControl['email'].dirty)">Email is required</mat-error>
-  </mat-form-field>
-
-  <mat-form-field appearance="fill">
-    <mat-label>Phone</mat-label>
-    <input matInput formControlName="phone" required>
-    <mat-error *ngIf="formControl['phone'].errors?.['required'] && (formControl['phone'].touched || formControl['phone'].dirty)"> phone is required</mat-error>
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" required>
+    <mat-error *ngIf="formControl['username']?.errors?.['required'] && (formControl['username'].touched || formControl['username'].dirty)">
+      Username is required.
+    </mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
     <input matInput type="password" formControlName="password" required>
-    <mat-error *ngIf="formControl['password'].errors?.['required'] && (formControl['password'].touched || formControl['password'].dirty)">password is required</mat-error>
+    <mat-error *ngIf="formControl['password']?.errors?.['required'] && (formControl['password'].touched || formControl['password'].dirty)">
+      Password is required.
+    </mat-error>
   </mat-form-field>
 
-  
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="first_name" required>
+    <mat-error *ngIf="formControl['first_name']?.errors?.['required'] && (formControl['first_name'].touched || formControl['first_name'].dirty)">
+      First name is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="last_name" required>
+    <mat-error *ngIf="formControl['last_name']?.errors?.['required'] && (formControl['last_name'].touched || formControl['last_name'].dirty)">
+      Last name is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" required>
+    <mat-error *ngIf="formControl['email']?.errors?.['required'] && (formControl['email'].touched || formControl['email'].dirty)">
+      Email is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput formControlName="phone_number" required>
+    <mat-error *ngIf="formControl['phone_number']?.errors?.['required'] && (formControl['phone_number'].touched || formControl['phone_number'].dirty)">
+      Phone number is required.
+    </mat-error>
+  </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Register</button>
   <p>Already have an account? <a routerLink="/users/login">Login here</a></p>
