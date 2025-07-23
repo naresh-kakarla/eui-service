@@ -1,0 +1,16 @@
+<!-- form-field.component.html -->
+<div class="mb-4">
+  <label class="block mb-1 font-medium" [for]="controlName">
+    {{ label }}
+  </label>
+
+  <input [id]="controlName" [type]="type" [formControlName]="controlName"
+    class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" [ngClass]="{
+      'border-red-500': formGroup.get(controlName)?.invalid && formGroup.get(controlName)?.touched
+    }" />
+
+  <div *ngIf="formGroup.get(controlName)?.invalid && formGroup.get(controlName)?.touched"
+    class="text-red-600 text-sm mt-1">
+    {{ label }} is required
+  </div>
+</div>

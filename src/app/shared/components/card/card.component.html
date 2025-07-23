@@ -1,0 +1,17 @@
+<div class="bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden flex flex-col h-full">
+  <img
+    *ngIf="image"
+    [src]="image"
+    [alt]="title"
+    class="w-full h-48 object-contain rounded-t bg-white-100 flex-shrink-0"
+  />
+
+  <div class="p-4 flex flex-col flex-grow justify-between">
+    <div>
+      <h3 *ngIf="title" class="text-lg font-semibold mb-2">{{ title }}</h3>
+      <p *ngIf="price" class="text-gray-600 mb-4">${{ price }}</p>
+    </div>
+
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <!-- Brand / Logo -->
+    <a routerLink="/" class="text-2xl font-bold text-indigo-600 hover:text-indigo-800">
+      E-Service
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 items-center">
+      <a routerLink="/" routerLinkActive="text-indigo-600" class="hover:text-indigo-500">Home</a>
+      <a routerLink="/products" routerLinkActive="text-indigo-600" class="hover:text-indigo-500">Products</a>
+      <a routerLink="/cart" routerLinkActive="text-indigo-600" class="relative hover:text-indigo-500">
+        Cart
+        <span *ngIf="cartItemCount > 0" 
+          class="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-1.5">
+          {{ cartItemCount }}
+        </span>
+      </a>
+      <a *ngIf="isLoggedIn" routerLink="/profile" routerLinkActive="text-indigo-600" class="hover:text-indigo-500">Profile</a>
+      <app-button *ngIf="isLoggedIn" variant="secondary" (click)="logout()">Logout</app-button>
+      <a *ngIf="!isLoggedIn" routerLink="/auth/login" routerLinkActive="text-indigo-600" class="hover:text-indigo-500">Login</a>
+      <a *ngIf="!isLoggedIn" routerLink="/auth/register" routerLinkActive="text-indigo-600" class="hover:text-indigo-500">Register</a>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <button (click)="toggleMobileMenu()" class="md:hidden focus:outline-none">
+      <svg *ngIf="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" 
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg *ngIf="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" 
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <nav *ngIf="mobileMenuOpen" class="md:hidden bg-white border-t border-gray-200 px-4 py-2 space-y-2">
+    <a routerLink="/" routerLinkActive="text-indigo-600" (click)="closeMobileMenu()" class="block">Home</a>
+    <a routerLink="/products" routerLinkActive="text-indigo-600" (click)="closeMobileMenu()" class="block">Products</a>
+    <a routerLink="/cart" routerLinkActive="text-indigo-600" (click)="closeMobileMenu()" class="block relative">
+      Cart
+      <span *ngIf="cartItemCount > 0" 
+        class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-1.5">
+        {{ cartItemCount }}
+      </span>
+    </a>
+    <a *ngIf="isLoggedIn" routerLink="/profile" routerLinkActive="text-indigo-600" (click)="closeMobileMenu()" class="block">Profile</a>
+    <app-button *ngIf="isLoggedIn" variant="secondary" (click)="logout(); closeMobileMenu()" class="block w-full text-left">
+      Logout
+    </app-button>
+    <a *ngIf="!isLoggedIn" routerLink="/auth/login" routerLinkActive="text-indigo-600" (click)="closeMobileMenu()" class="block">Login</a>
+    <a *ngIf="!isLoggedIn" routerLink="/auth/register" routerLinkActive="text-indigo-600" (click)="closeMobileMenu()" class="block">Register</a>
+  </nav>
+</header>
